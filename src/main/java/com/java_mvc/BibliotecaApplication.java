@@ -1,4 +1,4 @@
-package com.witortena.biblioteca;
+package com.java_mvc.biblioteca;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
