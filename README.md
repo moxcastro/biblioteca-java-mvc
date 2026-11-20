@@ -10,7 +10,4 @@ Projeto simples feito em Java com Spring Boot e Thymeleaf para treinar o padrão
 * **Modelos (Models):** Criação das classes com os atributos básicos de cada item do sistema (nome, título, ISBN, data de empréstimo, etc.).
 * **Git e GitHub:** Configuração do repositório, commits e envio de todo o código pelo terminal.
 
-## Como rodar:
-1. Abra o projeto no VS Code.
-2. Rode a aplicação Spring Boot.
-3. Acesse `http://localhost:8080/livros` no navegador.
+
