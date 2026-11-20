@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Empréstimo - Sistema de Biblioteca</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        header { background: #fff; padding: 15px; border-radius: 5px; margin-bottom: 20px; border: 1px solid #ddd; }
+        nav a { margin-right: 15px; text-decoration: none; color: #333; font-weight: bold; }
+        nav a:hover { color: #0056b3; }
+        .container { max-width: 700px; margin: 0 auto; background: #fff; padding: 24px; border: 1px solid #ddd; border-radius: 5px; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 10px 8px; border-bottom: 1px solid #eee; }
+        td:first-child { width: 210px; font-weight: bold; color: #444; }
+        .status-badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.9em; font-weight: bold; background: #e2e3e5; }
+        .btn-voltar { display: inline-block; margin-top: 20px; padding: 8px 15px; background: #6c757d; color: white; text-decoration: none; border-radius: 4px; }
+        .btn-voltar:hover { background: #5a6268; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a th:href="@{/livros}">Livros</a>
+            <a th:href="@{/autores}">Autores</a>
+            <a th:href="@{/categorias}">Categorias</a>
+            <a th:href="@{/usuarios}">Usuários</a>
+            <a th:href="@{/emprestimos}">Empréstimos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Ficha de Empréstimo</h2>
+        <table>
+            <tr>
+                <td>ID do Usuário</td>
+                <td th:text="${emprestimo.usuario}">ID</td>
+            </tr>
+            <tr>
+                <td>Nome do Usuário</td>
+                <td th:text="${emprestimo.nomeUsuario}">Nome</td>
+            </tr>
+            <tr>
+                <td>Livro Emprestado</td>
+                <td th:text="${emprestimo.livro}">Título do Livro</td>
+            </tr>
+            <tr>
+                <td>Data do Empréstimo</td>
+                <td th:text="${#temporals.format(emprestimo.dataEmprestimo, 'dd/MM/yyyy HH:mm')}">00/00/0000 00:00</td>
+            </tr>
+            <tr>
+                <td>Data da Devolução</td>
+                <td th:text="${#temporals.format(emprestimo.dataDevolucao, 'dd/MM/yyyy HH:mm')}">00/00/0000 00:00</td>
+            </tr>
+            <tr>
+                <td>Status Atual</td>
+                <td><span class="status-badge" th:text="${emprestimo.status}">Status</span></td>
+            </tr>
+        </table>
+        
+        <a th:href="@{/emprestimos}" class="btn-voltar">← Voltar para Empréstimos</a>
+    </div>
+</body>
+</html>
