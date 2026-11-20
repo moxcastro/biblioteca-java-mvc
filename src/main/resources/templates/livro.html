@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Livro - Sistema de Biblioteca</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        header { background: #fff; padding: 15px; border-radius: 5px; margin-bottom: 20px; border: 1px solid #ddd; }
+        nav a { margin-right: 15px; text-decoration: none; color: #333; font-weight: bold; }
+        nav a:hover { color: #0056b3; }
+        .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 24px; border: 1px solid #ddd; border-radius: 5px; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 10px 8px; border-bottom: 1px solid #eee; }
+        td:first-child { width: 180px; font-weight: bold; color: #444; }
+        .btn-voltar { display: inline-block; margin-top: 20px; padding: 8px 15px; background: #6c757d; color: white; text-decoration: none; border-radius: 4px; }
+        .btn-voltar:hover { background: #5a6268; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a th:href="@{/livros}">Livros</a>
+            <a th:href="@{/autores}">Autores</a>
+            <a th:href="@{/categorias}">Categorias</a>
+            <a th:href="@{/usuarios}">Usuários</a>
+            <a th:href="@{/emprestimos}">Empréstimos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Ficha do Livro</h2>
+        <table>
+            <tr>
+                <td>Título da Obra</td>
+                <td th:text="${livro.titulo}">Título</td>
+            </tr>
+            <tr>
+                <td>Autor Relacionado</td>
+                <td th:text="${livro.autor}">Nome do Autor</td>
+            </tr>
+            <tr>
+                <td>Código ISBN</td>
+                <td th:text="${livro.isbn}">000-0000000000</td>
+            </tr>
+        </table>
+        
+        <a th:href="@{/livros}" class="btn-voltar">← Voltar para Livros</a>
+    </div>
+</body>
+</html>
