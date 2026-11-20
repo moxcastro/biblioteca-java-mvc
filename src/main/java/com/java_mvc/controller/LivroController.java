@@ -19,8 +19,8 @@ public class LivroController {
     @GetMapping("/livro")
     public String exibirLivro(Model model) {
         Livro livro = new Livro();
-        livro.setTitulo("Roadside Picnic");
-        livro.setAutor("Sergey Strugatsky");
+        livro.setTitulo("Suicidas");
+        livro.setAutor("Rapahel Montes");
         livro.setIsbn("978-85-00-00000-0");
 
         model.addAttribute("livro", livro);

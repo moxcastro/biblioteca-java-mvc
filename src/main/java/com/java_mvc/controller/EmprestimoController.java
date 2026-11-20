@@ -20,9 +20,9 @@ public class EmprestimoController {
     @GetMapping("/emprestimo")
     public String exibirEmprestimo(Model model) {
         Emprestimo emprestimo = new Emprestimo();
-        emprestimo.setUsuario("maria.silva");
-        emprestimo.setNomeUsuario("Maria Silva");
-        emprestimo.setLivro("Dom Casmurro");
+        emprestimo.setUsuario("caio.bianchini");
+        emprestimo.setNomeUsuario("Caio Bianchini");
+        emprestimo.setLivro("O Apanhador no Campo de Centeio");
         emprestimo.setDataEmprestimo(LocalDateTime.now());
         emprestimo.setDataDevolucao(LocalDateTime.now().plusDays(7));
         emprestimo.setStatus("Retirado");

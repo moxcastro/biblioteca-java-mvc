@@ -1,4 +1,4 @@
-package com.java_mvc.monique;
+package com.java_mvc;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(MoniqueApplication.class);
+		return application.sources(BibliotecaApplication.class);
 	}
 
 }

@@ -21,7 +21,7 @@ public class UsuarioController {
         Usuario usuario = new Usuario();
         usuario.setNome("Monique Castro");
         usuario.setIdade(20);
-        usuario.setMatricula("251041069
+        usuario.setMatricula("25104106");
 
         model.addAttribute("usuario", usuario);
 
